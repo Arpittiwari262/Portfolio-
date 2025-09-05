@@ -1,135 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Jahnavi Dubey | Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jahnavi Dubey – Portfolio</title>
   <style>
     /* Reset */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: #fff;
-      line-height: 1.6;
-    }
-    a { color: #61dafb; text-decoration: none; }
-    header {
-      background: rgba(0,0,0,0.7);
-      padding: 1rem 2rem;
-      position: fixed;
-      width: 100%;
-      top: 0;
-      left: 0;
-      z-index: 1000;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    header h1 { font-size: 1.5rem; color: #61dafb; }
-    nav ul { list-style: none; display: flex; }
-    nav ul li { margin-left: 20px; }
-    nav ul li a:hover { text-decoration: underline; }
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family: 'Segoe UI',Arial,sans-serif;line-height:1.6;color:#fff;
+      background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);overflow-x:hidden;}
+    header{position:fixed;top:0;left:0;width:100%;background:rgba(0,0,0,0.6);
+      backdrop-filter:blur(8px);padding:1rem 0;z-index:1000;}
+    .nav{display:flex;justify-content:space-between;align-items:center;width:90%;max-width:1100px;margin:auto;}
+    .brand{font-size:1.5rem;font-weight:bold;color:#61dafb;text-decoration:none;}
+    .menu{list-style:none;display:flex;gap:1.5rem;}
+    .menu a{color:#fff;text-decoration:none;transition:color 0.3s;}
+    .menu a:hover{color:#61dafb;}
+    
+    main{padding-top:80px;}
+    section{padding:4rem 0;text-align:center;}
+    h1,h2{color:#61dafb;margin-bottom:1rem;}
+    p{max-width:800px;margin:0 auto 1rem;}
 
-    .hero {
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-      padding: 8rem 2rem 4rem;
-      min-height: 100vh;
-    }
-    .hero-text h1 { font-size: 2.5rem; margin-bottom: 1rem; }
-    .hero-text p { font-size: 1.2rem; max-width: 500px; }
-    .hero-photo img {
-      max-width: 280px;
-      border-radius: 50%;
-      border: 4px solid #61dafb;
-      box-shadow: 0 0 20px rgba(97,218,251,0.7);
-    }
+    .hero{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:2rem;}
+    .hero-text{flex:1 1 400px;}
+    .hero-photo img{border-radius:50%;max-width:280px;border:4px solid #61dafb;}
 
-    section { padding: 4rem 2rem; max-width: 900px; margin: auto; }
-    section h2 {
-      font-size: 2rem;
-      color: #61dafb;
-      margin-bottom: 1.5rem;
-      border-bottom: 2px solid #61dafb;
-      display: inline-block;
-    }
-    .card {
-      background: rgba(255,255,255,0.05);
-      padding: 1.5rem;
-      border-radius: 10px;
-      margin-bottom: 1rem;
-      transition: transform 0.3s ease;
-    }
-    .card:hover { transform: translateY(-5px); }
+    .chips{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:.8rem;margin-top:1rem;}
+    .chip{background:#111;padding:.6rem 1.2rem;border-radius:20px;transition:0.3s;}
+    .chip:hover{background:#61dafb;color:#000;}
 
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background: rgba(0,0,0,0.8);
-      margin-top: 2rem;
-    }
+    .edu-list{list-style:none;max-width:600px;margin:1rem auto;text-align:left;}
+    .edu-list li{margin-bottom:1rem;background:rgba(255,255,255,0.05);padding:1rem;border-radius:8px;}
+
+    footer{background:#000;text-align:center;padding:1rem 0;margin-top:2rem;color:#bbb;}
+    
+    /* Floating background canvas */
+    #particles-js{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;}
   </style>
 </head>
 <body>
-  <!-- Header -->
+  <!-- Particles Background -->
+  <div id="particles-js"></div>
+
+  <!-- HEADER -->
   <header>
-    <h1>Jahnavi Dubey</h1>
-    <nav>
-      <ul>
+    <nav class="nav">
+      <a class="brand" href="#top">Jahnavi<span> Dubey</span></a>
+      <ul class="menu">
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#career">Career</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero" id="about">
-    <div class="hero-text">
-      <h1>Hi, I’m <span style="color:#61dafb;">Jahnavi Dubey</span></h1>
-      <p>A passionate <strong>Software Engineer in training</strong>, exploring programming and problem-solving.</p>
-    </div>
-    <figure class="hero-photo">
-      <img src="https://drive.google.com/uc?export=view&id=1PLk0Q93mexwdEGM1iYxr6G6JcCeYNd6O" 
-           alt="Portrait of Jahnavi Dubey">
-    </figure>
-  </section>
+  <!-- MAIN -->
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero" id="about">
+      <div class="hero-text">
+        <h1>Hi, I’m <span style="color:#61dafb;">Jahnavi Dubey</span></h1>
+        <p>A passionate <strong>Software Engineer in training</strong>, exploring programming and problem-solving.</p>
+      </div>
+      <figure class="hero-photo">
+        <img src="https://via.placeholder.com/280" alt="Portrait of Jahnavi Dubey">
+      </figure>
+    </section>
 
-  <!-- Skills -->
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="card">💻 C Programming</div>
-    <div class="card">🌐 HTML, CSS, JavaScript</div>
-    <div class="card">⚡ Problem Solving</div>
-    <div class="card">📊 Design Thinking</div>
-  </section>
+    <!-- ABOUT -->
+    <section id="about-section">
+      <h2>About Me</h2>
+      <p>I’m a <strong>Computer Science undergraduate</strong> at Graphic Era Hill University, currently in my second year. 
+      My decision to pursue CSE came from a strong passion for <strong>programming and problem-solving</strong>. 
+      I enjoy exploring how technology can solve real-world challenges and I’m eager to continue building my skills across multiple programming languages.</p>
+    </section>
 
-  <!-- Projects -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="card">
-      <h3>Portfolio Website</h3>
-      <p>A personal portfolio website to showcase my skills and learning journey.</p>
-    </div>
-    <div class="card">
-      <h3>Birthday Website</h3>
-      <p>A fun interactive birthday-themed website made for my best friend 🎉.</p>
-    </div>
-  </section>
+    <!-- SKILLS -->
+    <section id="skills">
+      <h2>Skills & Interests</h2>
+      <ul class="chips">
+        <li class="chip">C (Proficient)</li>
+        <li class="chip">C++ (Learning)</li>
+        <li class="chip">Python (Familiar)</li>
+        <li class="chip">Exploring new languages</li>
+      </ul>
+    </section>
 
-  <!-- Contact -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>📧 Email: <a href="mailto:jahnavi@example.com">jahnavi@example.com</a></p>
-    <p>🔗 GitHub: <a href="https://github.com/Arpittiwari262" target="_blank">github.com/Arpittiwari262</a></p>
-    <p>💼 LinkedIn: <a href="https://linkedin.com" target="_blank">linkedin.com/in/jahnavi</a></p>
-  </section>
+    <!-- EDUCATION -->
+    <section id="education">
+      <h2>Education</h2>
+      <ul class="edu-list">
+        <li><strong>B.Tech in Computer Science and Engineering</strong> — Graphic Era Hill University<br><em>2nd Year, Ongoing</em></li>
+        <li><strong>Schooling</strong> — DAV Public School, Bilaspur, Chhattisgarh</li>
+      </ul>
+    </section>
 
+    <!-- CAREER -->
+    <section id="career">
+      <h2>Career Goals</h2>
+      <p>I am seeking <strong>internship opportunities</strong> in software development where I can apply my programming knowledge, gain hands-on experience, and continue learning. 
+      My goal is to contribute to impactful projects while growing into a skilled and versatile <strong>Software Engineer</strong>.</p>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>You can reach me at:</p>
+      <p><a href="mailto:jahnavidubey4@gmail.com" style="color:#61dafb;">jahnavidubey4@gmail.com</a></p>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
   <footer>
-    <p>© 2025 Jahnavi Dubey | Portfolio</p>
+    <p>© <span id="year"></span> Jahnavi Dubey. All rights reserved.</p>
   </footer>
+
+  <!-- Scripts -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS("particles-js",{
+      "particles":{"number":{"value":80},"color":{"value":"#61dafb"},
+      "shape":{"type":"circle"},"opacity":{"value":0.5},"size":{"value":3},
+      "line_linked":{"enable":true,"distance":150,"color":"#61dafb","opacity":0.4,"width":1},
+      "move":{"enable":true,"speed":2}},
+      "interactivity":{"events":{"onhover":{"enable":true,"mode":"repulse"}}},
+      "retina_detect":true});
+  </script>
 </body>
 </html>
